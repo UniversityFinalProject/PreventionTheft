@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prevention_theft/base.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prevention_theft/header.css'%}">
+
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Prevention Theft</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=yes"> -->
+
+
+    <style>
+        table, td, th {
+          border: 1px solid black;
+        }
+        
+        table {
+          border-collapse: collapse;
+          position: relative; left: 480px;
+          
+        }
+        
+        td {
+          text-align: center;
+        }
+
+        .auth {
+            position: relative; left: 480px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        {% include "prevention_theft/header.html" %}
+    </div>
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+    
+</body>
+</html>

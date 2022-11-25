@@ -1,0 +1,38 @@
+{% extends "prevention_theft/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="auth">
+    <form action="{% url 'prevention_theft:start'%}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="PREVIOUS_PAGE">
+    </form>
+</div>
+
+<br>
+<table border="1" text-align="center">
+    
+    <th>Name</th>
+    <th>Disappeared_Time</th>
+    <th>Disappeared_Count</th>
+    <th>Disappeared_Scene</th>
+    
+    {% for item in items %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.disappeared_time }}</td>
+        <td>{{ item.disappeared_count }}</td>
+        <td><img src={{ item.link }}></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock content %}
+
+
+    
+
+
+

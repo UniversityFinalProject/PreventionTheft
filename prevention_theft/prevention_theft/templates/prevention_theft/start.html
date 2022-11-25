@@ -1,0 +1,20 @@
+{% extends "prevention_theft/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="auth">
+    <form action="{% url 'prevention_theft:main' %}" method='post'>
+        {% csrf_token %}
+        <input type="submit" value="PROGRAM STOP">
+    </form>
+</div>
+
+<br>
+<div class="auth">
+    <form action="{% url 'prevention_theft:stealed_list'%}" method="get">
+        {% csrf_token %}
+        <input type="submit" value="DISAPPEARED LIST">
+    </form>
+</div>
+{% endblock content %}
